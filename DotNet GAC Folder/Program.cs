@@ -4,6 +4,16 @@ using System.Reflection;
 //ref link:https://www.youtube.com/watch?v=iqwJHc20uHc&list=PLRwVmtr-pp06rfSgNYu_oBg40DkwXiRHt&index=21
 // GAC - GLOBAL Assembly Cache
 
+// SH Fusion.DLL - for knowledge in assembly files plugin in GAC
+
+//------------GAC STURCTURE-----------
+//C:\Windows\Microsoft.NET\assembly\GAC_MSIL\Farm\v4.0_1.0.0.0__2f4bcac2715a74ca\Farm.dll
+//C:\Windows\Microsoft.NET\assembly\GAC_MSIL\Farm\v4.0_1.0.0.0__439d39c99d560b47\Farm.dll
+
+// 1 - Name -   Farm
+// 2 - Version  - v4.0_1.0.0.0
+// 3 - Public Key Token - 2f4bcac2715a74ca
+// 4 - Culture
 
 /*---------------------------CMD---------------------------------------
  * 
@@ -367,6 +377,176 @@ Kulpots moooooooooooo version 1
 Kulpots moooooooooooo version 1
 Kulpots moooooooooooo version 1
 Kulpots moooooooooooo version 1
+-----------------------------------------------------------------------------
+--------------------DotNet GAC Folder-------------START------------
+
+C:\Users\sunny\source\repos\DotNet GAC Folder>cd DotNet GAC Folder
+
+C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder>dir
+ Volume in drive C has no label.
+ Volume Serial Number is DAE4-938D
+
+ Directory of C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder
+
+28/09/2023  12:08 pm    <DIR>          .
+28/09/2023  12:08 pm    <DIR>          ..
+28/09/2023  11:58 am               189 App.config
+28/09/2023  11:58 am    <DIR>          bin
+28/09/2023  11:58 am             2,384 DotNet GAC Folder.csproj
+28/09/2023  11:49 am             4,096 Farm.dll
+28/09/2023  11:02 am               596 KulpotKey.key
+28/09/2023  11:58 am    <DIR>          obj
+28/09/2023  12:07 pm            15,209 Program.cs
+28/09/2023  11:58 am    <DIR>          Properties
+               5 File(s)         22,474 bytes
+               5 Dir(s)  487,332,642,816 bytes free
+
+C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder>sn -k YourKey.snk
+
+Microsoft (R) .NET Framework Strong Name Utility  Version 4.0.30319.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Key pair written to YourKey.snk
+
+C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder>dir
+ Volume in drive C has no label.
+ Volume Serial Number is DAE4-938D
+
+ Directory of C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder
+
+28/09/2023  12:11 pm    <DIR>          .
+28/09/2023  12:11 pm    <DIR>          ..
+28/09/2023  11:58 am               189 App.config
+28/09/2023  11:58 am    <DIR>          bin
+28/09/2023  11:58 am             2,384 DotNet GAC Folder.csproj
+28/09/2023  11:49 am             4,096 Farm.dll
+28/09/2023  11:02 am               596 KulpotKey.key
+28/09/2023  11:58 am    <DIR>          obj
+28/09/2023  12:11 pm            16,498 Program.cs
+28/09/2023  11:58 am    <DIR>          Properties
+28/09/2023  12:10 pm               596 YourKey.snk
+               6 File(s)         24,359 bytes
+               5 Dir(s)  487,331,520,512 bytes free
+
+C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder>erase Farm.dll
+
+C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder>dir
+ Volume in drive C has no label.
+ Volume Serial Number is DAE4-938D
+
+ Directory of C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder
+
+28/09/2023  12:12 pm    <DIR>          .
+28/09/2023  12:12 pm    <DIR>          ..
+28/09/2023  11:58 am               189 App.config
+28/09/2023  11:58 am    <DIR>          bin
+28/09/2023  11:58 am             2,384 DotNet GAC Folder.csproj
+28/09/2023  11:02 am               596 KulpotKey.key
+28/09/2023  11:58 am    <DIR>          obj
+28/09/2023  12:11 pm            17,368 Program.cs
+28/09/2023  11:58 am    <DIR>          Properties
+28/09/2023  12:10 pm               596 YourKey.snk
+               5 File(s)         21,133 bytes
+               5 Dir(s)  487,331,205,120 bytes free
+
+C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder>csc /t:library /out:Farm.dll /keyfile:KulpotKey.key Program.cs
+Microsoft (R) Visual C# Compiler version 4.7.0-3.23416.8 (43b0b05c)
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+
+C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder>dir
+ Volume in drive C has no label.
+ Volume Serial Number is DAE4-938D
+
+ Directory of C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder
+
+28/09/2023  12:13 pm    <DIR>          .
+28/09/2023  12:13 pm    <DIR>          ..
+28/09/2023  11:58 am               189 App.config
+28/09/2023  11:58 am    <DIR>          bin
+28/09/2023  11:58 am             2,384 DotNet GAC Folder.csproj
+28/09/2023  12:13 pm             4,096 Farm.dll
+28/09/2023  11:02 am               596 KulpotKey.key
+28/09/2023  11:58 am    <DIR>          obj
+28/09/2023  12:12 pm            18,273 Program.cs
+28/09/2023  11:58 am    <DIR>          Properties
+28/09/2023  12:10 pm               596 YourKey.snk
+               6 File(s)         26,134 bytes
+               5 Dir(s)  487,330,828,288 bytes free
+
+C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder>gacutil -i Farm.dll
+Microsoft (R) .NET Global Assembly Cache Utility.  Version 4.0.30319.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Assembly successfully added to the cache
+
+C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder>erase Farm.dll
+
+C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder>dir
+ Volume in drive C has no label.
+ Volume Serial Number is DAE4-938D
+
+ Directory of C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder
+
+28/09/2023  12:14 pm    <DIR>          .
+28/09/2023  12:14 pm    <DIR>          ..
+28/09/2023  11:58 am               189 App.config
+28/09/2023  11:58 am    <DIR>          bin
+28/09/2023  11:58 am             2,384 DotNet GAC Folder.csproj
+28/09/2023  11:02 am               596 KulpotKey.key
+28/09/2023  11:58 am    <DIR>          obj
+28/09/2023  12:14 pm            19,666 Program.cs
+28/09/2023  11:58 am    <DIR>          Properties
+28/09/2023  12:10 pm               596 YourKey.snk
+               5 File(s)         23,431 bytes
+               5 Dir(s)  487,330,050,048 bytes free
+
+-------------YourKey.snk gacutil -i Farm.dll ---------------------
+C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder>csc /t:library /out:Farm.dll /keyfile:YourKey.snk Program.cs
+Microsoft (R) Visual C# Compiler version 4.7.0-3.23416.8 (43b0b05c)
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+
+C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder>gacutil -i Farm.dll
+Microsoft (R) .NET Global Assembly Cache Utility.  Version 4.0.30319.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Assembly successfully added to the cache
+
+C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder>sn -p YourKey.snk YourPublicKey.whatever
+
+Microsoft (R) .NET Framework Strong Name Utility  Version 4.0.30319.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Public key written to YourPublicKey.whatever
+
+C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder>sn -tp YourPublicKey.whatever
+
+Microsoft (R) .NET Framework Strong Name Utility  Version 4.0.30319.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Public key (hash algorithm: sha1):
+0024000004800000940000000602000000240000525341310004000001000100c5d41d9269420b
+31182d87f8356baebd4e7d3feaf2771ff13b861b6d6a8dd838546ad167f736f464a04250db1d71
+e65dd423093f4b34ffc62678753081aae9f21bc4b1723e56f434d3e1ab10a5540f7e491166f8ac
+80dd059281d23e4c55dccd5c8d5dba335a4209b92abe47e0037e4e6dd4d6569c5c09fe905e4d04
+cc50fbb5
+
+Public key token is 2f4bcac2715a74ca
+
+------------------Uninstall -----gacutil -u Farm-----------------
+C:\Users\sunny\source\repos\DotNet GAC Folder\DotNet GAC Folder>gacutil -u Farm
+Microsoft (R) .NET Global Assembly Cache Utility.  Version 4.0.30319.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+
+Assembly: Farm, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2f4bcac2715a74ca, processorArchitecture=MSIL
+Uninstalled: Farm, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2f4bcac2715a74ca, processorArchitecture=MSIL
+
+Assembly: Farm, Version=1.0.0.0, Culture=neutral, PublicKeyToken=439d39c99d560b47, processorArchitecture=MSIL
+Uninstalled: Farm, Version=1.0.0.0, Culture=neutral, PublicKeyToken=439d39c99d560b47, processorArchitecture=MSIL
+Number of assemblies uninstalled = 2
+Number of failures = 0
 
 
 
